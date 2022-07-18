@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo, position property</title>
+    <style>
+        h1:hover {
+            background-color: bisque;
+            font-size: 20px;
+        }
+
+        p {
+            border: 5px solid green;
+        }
+
+        input:focus {
+            color: red;
+        }
+
+        a:visited {
+            color: coral;
+        }
+
+        .child :nth-child(2n) {
+            color: red;
+        }
+
+        .child :nth-child(2n+1) {
+            color: yellow;
+        }
+
+        h2 {
+            background-color: rebeccapurple;
+        }
+
+        h3 {
+            background-color: greenyellow;
+        }
+
+        h4 {
+            background-color: blueviolet;
+        }
+
+        h5 {
+            background-color: pink;
+        }
+
+        ul::before {
+            content: 'hello ';
+            color: rgb(33, 130, 28);
+        }
+
+        ul::after {
+            content: ' tumi';
+            color: tomato;
+        }
+
+        #static {
+            position: static;
+            top: 10px;
+            color: white;
+            font-size: 20px;
+            background-color: blueviolet;
+        }
+
+        #relative {
+            position: relative;
+            top: -30px;
+            color: red;
+            font-size: 20px;
+
+        }
+
+        #sectionrelative {
+            position: relative;
+        }
+
+        #absolute {
+            position: absolute;
+            top: 30px;
+        }
+
+        #sticky {
+            position: sticky;
+            top: 25px;
+        }
+
+        #fixed {
+            position: fixed;
+            top: 70px;
+        }
+
+        .dummy {
+            height: 30px;
+            width: 20px;
+            background-color: pink;
+        }
+
+        .z-index0 {
+            position: relative;
+            top: 3px;
+            z-index: 2;
+        }
+
+        .z-index1 {
+            position: relative;
+            top: -25px;
+            z-index: 1;
+        }
+
+        .z-index2 {
+            position: relative;
+            top: -50px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>pseudo property (hover)</h1>
+            <a href="https://www.youtube.com/watch?v=5I9pnm7fQuo">pseudo property(visited)</a>
+
+            <a href="google.com">google</a>
+        </div>
+        <div class="child">
+            <h2>pseudo property(child)</h2>
+            <h3>room -2 <input type="text"></h3>
+            <h4>room -2</h4>
+            <h5>room -2</h5>
+            <ul>pseudo property(before and after)</ul>
+        </div>
+    </section>
+
+    <section id="sectionrelative">
+        <p id="static">1pseudo property(position-static)</p>
+        <p id="fixed">2pseudo property(position-fixed) </p>
+        <p>3position</p>
+        <p>4position</p>
+        <p id="relative">5pseudo property(position-relative)</p>
+        <p id="absolute">6pseudo property(position-absolute)</p>
+        <p id="sticky">7pseudo property(position-sticky)</p>
+        <p>8position</p>
+        <p>12position</p>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+        <h6>go to your class</h6>
+    </section>
+    <section>
+        <div>
+            <p style="background-color: red;" class="z-index0">9position</p>
+            <p class="z-index1" style="background-color: green;">10position</p>
+            <p class="z-index2" style="background-color: pink;">11position</p>
+        </div>
+    </section>
+    <section>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+        <div class="dummy">
+            <h1></h1>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -6,22 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Login Form And Flexible Nav Using Flexbox</title>
+    <script src="https://kit.fontawesome.com/f3a04868c8.js" crossorigin="anonymous"></script>
     <style>
+        .display-input {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .display-input input {
+            margin-top: 5px;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
 
+        /* to show all inputs in the center of the page */
+        .display-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        /* to show all inputs in the center of the page */
+
+        nav a {
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        /* to show nav buttons in left and right side of the page */
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
-
-    <form class="display-button">
-        <h2>Login Page</h2>
-        <input type="email" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
-        <input type="submit" value="Login">
-    </form>
-
-
+    <nav>
+        <span>
+            <a href="">Home</a>
+            <a href="">About US</a>
+            <a href="">Contact US</a>
+            <a href="">News</a>
+        </span>
+        <span>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </span>
+    </nav>
+    <section class="display-section">
+        <form class="display-input">
+            <h2>Login Page</h2>
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Login">
+        </form>
+    </section>
 </body>
 
 </html>

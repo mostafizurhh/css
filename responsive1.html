@@ -7,23 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Website1</title>
     <style>
-        /* css relative unit */
+        /* 2. css relative unit */
         h1 {
             font-size: 10vh;
         }
 
-        /* responsive/fluid image */
+        /* 3. responsive/fluid image */
         .salad img {
             width: 100%;
         }
 
-        /* body max-width and margin auto */
+        /* 4. body max-width and margin auto */
         body {
             max-width: 1240px;
             margin: 0 auto;
         }
 
-        /* split screen using flex(two columns) */
+        /* 5. split screen using flex(two columns) */
         .container-tow {
             display: flex;
         }
@@ -54,6 +54,53 @@
                 /*show contents in column and takes 100% availabe space when screen size is small*/
             }
         }
+
+        /* 6. grid responsive */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .food {
+            border: 2px solid coral;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .food img {
+            width: 100%;
+        }
+
+        @media screen and (max-width:576px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media screen and (min-width:577px) and (max-width:768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width:769px) and (max-width:992px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (min-width:993px) and (max-width:1240px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media screen and (min-width:1241px) {
+            .container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
     </style>
 </head>
 
@@ -62,7 +109,8 @@
          2. css relative unit (%,em,rem,vh,vw)
          3. responsive image/fluid image (img width=100%)
          4. body max-width and margin auto (set a maximum width for screen and set margin to [0 auto] to place all the content in the center of the webpage)
-         5. split screen using flex-->
+         5. split screen using flex
+         6. grid responsive(multi column)-->
     <section>
         <h1> hello world hello world</h1>
     </section>
@@ -78,6 +126,120 @@
             </div>
             <div class="split">
                 <img src="Project Cover5.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- .container>.food*12>img[src="Project Cover5.png"]+h3{item-$}+h4{price:$0}+p>lorem30^button{order now} -->
+        <h2>Multi Column</h2>
+        <div class="container">
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-1</h3>
+                <h4>price:10</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel quasi voluptas. Aperiam
+                    alias sit necessitatibus dolore itaque est ex optio, beatae, quos soluta cum assumenda magnam,
+                    nostrum nesciunt veritatis!</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-2</h3>
+                <h4>price:20</h4>
+                <p>Commodi ea, tempore dicta nemo neque possimus impedit sit ipsa consequuntur accusantium! Quidem,
+                    fugiat ad aspernatur placeat, architecto maiores itaque iste animi, consequatur similique doloribus
+                    non nesciunt quibusdam expedita nisi?</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-3</h3>
+                <h4>price:30</h4>
+                <p>Sint, harum aut? Delectus dolores ut magnam. Temporibus doloremque officia enim deserunt, nihil
+                    dolore blanditiis quis facere a nostrum, at laborum eligendi dignissimos aut facilis illum
+                    accusantium amet ut dolorem?</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-4</h3>
+                <h4>price:40</h4>
+                <p>Harum excepturi iusto sequi dolorum voluptatibus voluptate mollitia, id unde saepe temporibus
+                    perferendis, impedit neque sunt amet veritatis earum sapiente, similique vero repellendus? Deleniti
+                    harum asperiores odit placeat accusantium! Laboriosam?</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-5</h3>
+                <h4>price:50</h4>
+                <p>Fugiat repellat deserunt tenetur rem asperiores nulla odit, dolorum numquam vitae quaerat voluptatum
+                    excepturi, neque voluptates ratione ex amet consectetur totam soluta, eligendi vero velit explicabo
+                    nisi quasi quam? Sunt.</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-6</h3>
+                <h4>price:60</h4>
+                <p>Sunt, consequuntur accusantium! Excepturi, obcaecati modi repudiandae at praesentium quam culpa
+                    quidem deserunt vero, doloremque recusandae minima officiis similique ab consequuntur, eligendi
+                    ullam ipsum! Ullam rem tenetur tempore id animi!</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-7</h3>
+                <h4>price:70</h4>
+                <p>Mollitia, nam corrupti. Voluptatem consectetur, temporibus perferendis autem quod iste, est id, amet
+                    corrupti quisquam porro nobis unde ad numquam adipisci ex minus veniam? Necessitatibus quidem hic
+                    quia obcaecati iste!</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-8</h3>
+                <h4>price:80</h4>
+                <p>Quibusdam, quidem laborum. Nostrum molestiae ipsum nulla consequatur velit, itaque laboriosam
+                    possimus corporis numquam aliquid hic atque voluptatem at delectus labore, beatae corrupti. Ad,
+                    nisi! Totam beatae veniam suscipit ea!</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-9</h3>
+                <h4>price:90</h4>
+                <p>Deleniti odio suscipit iusto doloribus ad unde, nam nulla vel, nobis odit inventore temporibus
+                    consequatur! Facilis assumenda deserunt, beatae optio, iusto quaerat dignissimos, iure illum totam
+                    itaque vel similique recusandae.</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-10</h3>
+                <h4>price:100</h4>
+                <p>Consequatur inventore tempora iusto eum neque atque deserunt dolorum est, ea explicabo praesentium
+                    quae voluptate porro possimus esse labore at quaerat libero voluptatibus autem cumque magni veniam
+                    facilis? Animi, quo.</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-11</h3>
+                <h4>price:110</h4>
+                <p>Repellendus nam minus expedita, fuga, odio itaque cupiditate alias at, aliquam beatae cum. Eos rem
+                    unde necessitatibus tempora, cupiditate labore molestiae ab blanditiis iste, cum dignissimos nam
+                    distinctio. Voluptatem, reprehenderit?</p>
+                <button>order now</button>
+            </div>
+            <div class="food">
+                <img src="Project Cover5.png" alt="">
+                <h3>item-12</h3>
+                <h4>price:120</h4>
+                <p>Adipisci cum commodi, inventore nisi doloremque eum perferendis ut, alias natus repellendus nam. Et
+                    ratione vero, perspiciatis id voluptatibus esse? Assumenda reiciendis nobis dolorum. Veniam eveniet
+                    architecto perspiciatis rem cumque.</p>
+                <button>order now</button>
             </div>
         </div>
     </section>

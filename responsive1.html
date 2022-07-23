@@ -7,17 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Website1</title>
     <style>
-        body {
-            max-width: 1024px;
-            margin: 0 auto;
-        }
-
+        /* css relative unit */
         h1 {
             font-size: 10vh;
         }
 
+        /* responsive/fluid image */
         .salad img {
             width: 100%;
+        }
+
+        /* body max-width and margin auto */
+        body {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        /* split screen using flex(two columns) */
+        .container-tow {
+            display: flex;
+        }
+
+        .container-tow .split {
+            width: 50%;
+            /*each contents will take 50% width of the screen*/
+        }
+
+        .split {
+            border: 1px solid brown;
+        }
+
+        .split img {
+            width: 100%;
+            height: 100%;
+            /*each image contents will take 100% width and height of the screen. doesn't need for text*/
+        }
+
+        @media screen and (max-width:576px) {
+            .container-tow {
+                flex-direction: column;
+                /*show contents in column when screen size is small*/
+            }
+
+            .container-tow .split {
+                width: 100%;
+                /*show contents in column and takes 100% availabe space when screen size is small*/
+            }
         }
     </style>
 </head>
@@ -26,7 +61,8 @@
     <!-- 1. viewport meta tag
          2. css relative unit (%,em,rem,vh,vw)
          3. responsive image/fluid image (img width=100%)
-         4. body max-width and margin auto (set a maximum width for screen and set margin to [0 auto] to place all the content in the center of the webpage)-->
+         4. body max-width and margin auto (set a maximum width for screen and set margin to [0 auto] to place all the content in the center of the webpage)
+         5. split screen using flex-->
     <section>
         <h1> hello world hello world</h1>
     </section>
@@ -34,7 +70,17 @@
         <h3>Salad Bowl</h3>
         <img src="Project Cover5.png" alt="">
     </section>
-
+    <section>
+        <h3>two parts</h3>
+        <div class="container-tow">
+            <div class="split">
+                <img src="bat1.png" alt="">
+            </div>
+            <div class="split">
+                <img src="Project Cover5.png" alt="">
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
